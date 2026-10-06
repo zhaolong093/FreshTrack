@@ -54,15 +54,17 @@ final class MockFoodRepository: FoodRepository {
         
         fetchExpiringFoodCalled = true
         
-        let today = Date()
+        let calendar = Calendar.current
         
-        guard let endDate = Calendar.current.date(byAdding: .day, value: days, to: today)
+        let startDate = calendar.startOfDay(for: Date())
+        
+        guard let endDate = Calendar.current.date(byAdding: .day, value: days + 7, to: startDate)
                 else {
             return []
         }
         
         return foodItems.filter{
-            foodItem in !foodItem.isConsumed && foodItem.expiryDate >= today && foodItem.expiryDate <= endDate
+            foodItem in !foodItem.isConsumed && foodItem.expiryDate >= startDate && foodItem.expiryDate <= endDate
         }
     }
     

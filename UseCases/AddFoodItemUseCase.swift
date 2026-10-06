@@ -48,10 +48,17 @@ struct AddFoodItemUseCase {
         
         guard foodItem.quantity > 0 else {
             throw AddFoodItemError.invalidQuantity
+            
         }
         
-        guard foodItem.expiryDate >= foodItem.purchaseDate else {
-            throw AddFoodItemError.invalidQuantity
+        let calendar = Calendar.current
+        
+        let purchaseDay = calendar.startOfDay(for: foodItem.purchaseDate)
+        
+        let expiryDate = calendar.startOfDay(for: foodItem.expiryDate)
+        
+        guard expiryDate >=  purchaseDay else {
+            throw AddFoodItemError.invalidExpiryDate
         }
         
         let locationName = foodItem.storageLocation.name
@@ -60,8 +67,13 @@ struct AddFoodItemUseCase {
         guard !locationName.isEmpty else {
             throw AddFoodItemError.missingStorageLocation
         }
+        
+        var cleanedFoodItem = foodItem
+        cleanedFoodItem.name = trimmedName
+        cleanedFoodItem.storageLocation.name = locationName
+        
         do {
-            try repository.addFoodItem(foodItem)
+            try repository.addFoodItem(cleanedFoodItem)
         }
         catch {
             throw AddFoodItemError.unableToSave

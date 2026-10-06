@@ -10,10 +10,10 @@ import Foundation
 
 struct FindExpiringFoodUseCase {
     
-    private let respository: FoodRepository
+    private let repository: FoodRepository
     
-    init(respository: FoodRepository) {
-        self.respository = respository
+    init(repository: FoodRepository) {
+        self.repository = repository
     }
     
     enum FindExpiringFoodError: LocalizedError, Equatable{
@@ -37,7 +37,7 @@ struct FindExpiringFoodUseCase {
         }
         
         do{
-            return try respository.fetchExpiringFood(withinDays: days)
+            return try repository.fetchExpiringFood(withinDays: days)
         }
         catch {
             throw FindExpiringFoodError.unableToLoad

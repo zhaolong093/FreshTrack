@@ -18,20 +18,27 @@ final class CoreDataFoodRepository: FoodRepository{
     
     //MARK: Add FoodItems
     func addFoodItem(_ fooditem: FoodItem) throws {
-        let entity = FoodItemEntity(context: context)
         
-        entity.id = fooditem.id
-        entity.name = fooditem.name
-        entity.quantity = Int16(fooditem.quantity)
-        entity.purchaseDate = fooditem.purchaseDate
-        entity.expiryDate = fooditem.expiryDate
-        entity.isConsumed = fooditem.isConsumed
-        
-        entity.storageLocation = try storageLocationEntity(
-            for: fooditem.storageLocation
-        )
-        
-        try context.save()
+        do{
+            let entity = FoodItemEntity(context: context)
+            
+            entity.id = fooditem.id
+            entity.name = fooditem.name
+            entity.quantity = Int16(fooditem.quantity)
+            entity.purchaseDate = fooditem.purchaseDate
+            entity.expiryDate = fooditem.expiryDate
+            entity.isConsumed = fooditem.isConsumed
+            
+            entity.storageLocation = try storageLocationEntity(
+                for: fooditem.storageLocation
+            )
+            
+            try context.save()
+        }
+        catch {
+            context.rollback()
+            throw error
+        }
     }
     
     func fetchAllFoodItems() throws -> [FoodItem] {
@@ -52,15 +59,17 @@ final class CoreDataFoodRepository: FoodRepository{
     
     func fetchExpiringFood(withinDays days: Int) throws -> [FoodItem] {
         let request = FoodItemEntity.fetchRequest()
-        let today = Date()
         
-        guard let endDate = Calendar.current.date(byAdding: .day, value: days, to: today)
+        let calender = Calendar.current
+        let startDate = calender.startOfDay(for: Date())
+        
+        guard let endDate = Calendar.current.date(byAdding: .day, value: days + 7, to: startDate)
                 else{
             return []
         }
         request.predicate = NSPredicate(
             format: "isConsumed == NO AND expiryDate >= %@ AND expiryDate <= %@",
-            today as NSDate,
+            startDate as NSDate,
             endDate as NSDate
         )
         
@@ -87,7 +96,13 @@ final class CoreDataFoodRepository: FoodRepository{
             throw FoodError.foodNotFound
         }
         entity.isConsumed = true
-        try context.save()
+        do {
+            try context.save()
+        }
+        catch {
+            context.rollback()
+            throw error
+        }
     }
     
     // MARK: Storage Location
@@ -95,7 +110,9 @@ final class CoreDataFoodRepository: FoodRepository{
     private func storageLocationEntity(for location: StorageLocation) throws -> StorageLocationEntity{
         let request = StorageLocationEntity.fetchRequest()
         
-        request.predicate = NSPredicate(format: "id == %@", location.id as NSUUID)
+        let cleanName = location.name.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        request.predicate = NSPredicate(format: "name ==[c] %@", location.name)
         
         request.fetchLimit = 1
         
@@ -105,8 +122,8 @@ final class CoreDataFoodRepository: FoodRepository{
         
         let newLocation = StorageLocationEntity(context : context)
         
-        newLocation.id = location.id
-        newLocation.name = location.name
+        newLocation.id = UUID()
+        newLocation.name = cleanName
         
         return newLocation
     }
@@ -118,7 +135,7 @@ final class CoreDataFoodRepository: FoodRepository{
             let purchaseDate = entity.purchaseDate,
             let expiryDate = entity.expiryDate,
             let locationEntity = entity.storageLocation,
-            let locationID = entity.id,
+            let locationID = locationEntity.id,
             let locationName = locationEntity.name
         else {
             return nil

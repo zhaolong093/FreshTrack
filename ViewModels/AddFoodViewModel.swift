@@ -16,7 +16,7 @@ final class AddFoodViewModel: ObservableObject{
     @Published var foodName = ""
     @Published var quantity = 1
     @Published var purchaseDate = Date()
-    @Published var expiryDate = Date()
+    @Published var expiryDate = Calendar.current.date(byAdding: .day, value: 1 ,to: Date()) ?? Date()
     
     @Published var selectedStorageLocation: StorageLocation?
     
@@ -35,6 +35,11 @@ final class AddFoodViewModel: ObservableObject{
     //MARK: Save Food
     func saveFood(){
         
+        //Clear previous result before another attempt
+        errorMessage = nil
+        showingError = false
+        didSaveFood = false
+        
         guard let storageLocation = selectedStorageLocation else {
             errorMessage = "Please select where the food is stored"
             showingError = true
@@ -51,8 +56,9 @@ final class AddFoodViewModel: ObservableObject{
         do {
             try addFoodItemUseCase.execute(foodItem)
             
-            didSaveFood = true
             resetForm()
+            
+            didSaveFood = true
         }
         
         catch{
@@ -68,7 +74,7 @@ final class AddFoodViewModel: ObservableObject{
         foodName = ""
         quantity = 1
         purchaseDate = Date()
-        expiryDate = Date()
+        expiryDate = Calendar.current.date(byAdding: .day, value: 1 ,to: Date()) ?? Date()
         selectedStorageLocation = nil
     }
 }

@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let addFoodItemUseCase: AddFoodItemUseCase
+    
     var body: some View {
         NavigationStack {
             VStack (spacing: 24){
+                Spacer()
+                
                 Image (systemName: "leaf.circle.fill")
                     .font(.system(size: 80))
                 
@@ -24,10 +29,15 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text("Your food dashbaord will appear here.")
-                    .foregroundStyle(.secondary)
-                
-                
+                NavigationLink{
+                    AddFoodView(viewModel: AddFoodViewModel(addFoodItemUseCase: addFoodItemUseCase))
+                } label: {
+                    Label("Add Food", systemImage: "plus.circle.fill")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                }
+                .buttonStyle(.borderedProminent)
                 Spacer()
             }
             .padding()
@@ -37,7 +47,7 @@ struct ContentView: View {
 }
 
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
 
