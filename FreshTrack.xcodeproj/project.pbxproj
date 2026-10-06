@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		5230D18E306F3FF7008E2BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5230D173306F3FF4008E2BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5230D17A306F3FF4008E2BF5;
+			remoteInfo = FreshTrack;
+		};
+		5230D198306F3FF7008E2BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5230D173306F3FF4008E2BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5230D17A306F3FF4008E2BF5;
+			remoteInfo = FreshTrack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5230D17B306F3FF4008E2BF5 /* FreshTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5230D18D306F3FF7008E2BF5 /* FreshTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5230D197306F3FF7008E2BF5 /* FreshTrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5230D17D306F3FF4008E2BF5 /* FreshTrack */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FreshTrack;
+			sourceTree = "<group>";
+		};
+		5230D190306F3FF7008E2BF5 /* FreshTrackTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FreshTrackTests;
+			sourceTree = "<group>";
+		};
+		5230D19A306F3FF7008E2BF5 /* FreshTrackUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FreshTrackUITests;
+			sourceTree = "<group>";
+		};
+		5230D1A830735469008E2BF5 /* App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = App;
+			sourceTree = "<group>";
+		};
+		5230D1AA30735476008E2BF5 /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5230D1AB3073547F008E2BF5 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5230D1AC30735487008E2BF5 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5230D1AD3073548D008E2BF5 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5230D1D93073581C008E2BF5 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52DCD0C23073629000D513CD /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52DCD0CC307362EF00D513CD /* UseCases */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		52DCD0D1307363A500D513CD /* Repositories */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		52DCD0D4307363A700D513CD /* Errors */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Errors;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5230D178306F3FF4008E2BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		5230D18A306F3FF7008E2BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		5230D194306F3FF7008E2BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5230D172306F3FF4008E2BF5 = {
+			isa = PBXGroup;
+			children = (
+				5230D1A830735469008E2BF5 /* App */,
+				5230D1AA30735476008E2BF5 /* Data */,
+				52DCD0D4307363A700D513CD /* Errors */,
+				5230D17D306F3FF4008E2BF5 /* FreshTrack */,
+				5230D190306F3FF7008E2BF5 /* FreshTrackTests */,
+				5230D19A306F3FF7008E2BF5 /* FreshTrackUITests */,
+				52DCD0C23073629000D513CD /* Models */,
+				5230D17C306F3FF4008E2BF5 /* Products */,
+				52DCD0D1307363A500D513CD /* Repositories */,
+				5230D1AD3073548D008E2BF5 /* Resources */,
+				5230D1AC30735487008E2BF5 /* Shared */,
+				52DCD0CC307362EF00D513CD /* UseCases */,
+				5230D1D93073581C008E2BF5 /* ViewModels */,
+				5230D1AB3073547F008E2BF5 /* Views */,
+			);
+			sourceTree = "<group>";
+		};
+		5230D17C306F3FF4008E2BF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5230D17B306F3FF4008E2BF5 /* FreshTrack.app */,
+				5230D18D306F3FF7008E2BF5 /* FreshTrackTests.xctest */,
+				5230D197306F3FF7008E2BF5 /* FreshTrackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5230D17A306F3FF4008E2BF5 /* FreshTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5230D19F306F3FF7008E2BF5 /* Build configuration list for PBXNativeTarget "FreshTrack" */;
+			buildPhases = (
+				5230D177306F3FF4008E2BF5 /* Sources */,
+				5230D178306F3FF4008E2BF5 /* Frameworks */,
+				5230D179306F3FF4008E2BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				5230D17D306F3FF4008E2BF5 /* FreshTrack */,
+				5230D1A830735469008E2BF5 /* App */,
+				5230D1AA30735476008E2BF5 /* Data */,
+				5230D1AB3073547F008E2BF5 /* Views */,
+				5230D1AC30735487008E2BF5 /* Shared */,
+				5230D1AD3073548D008E2BF5 /* Resources */,
+				5230D1D93073581C008E2BF5 /* ViewModels */,
+				52DCD0C23073629000D513CD /* Models */,
+				52DCD0CC307362EF00D513CD /* UseCases */,
+				52DCD0D1307363A500D513CD /* Repositories */,
+				52DCD0D4307363A700D513CD /* Errors */,
+			);
+			name = FreshTrack;
+			productName = FreshTrack;
+			productReference = 5230D17B306F3FF4008E2BF5 /* FreshTrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5230D18C306F3FF7008E2BF5 /* FreshTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5230D1A2306F3FF7008E2BF5 /* Build configuration list for PBXNativeTarget "FreshTrackTests" */;
+			buildPhases = (
+				5230D189306F3FF7008E2BF5 /* Sources */,
+				5230D18A306F3FF7008E2BF5 /* Frameworks */,
+				5230D18B306F3FF7008E2BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5230D18F306F3FF7008E2BF5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5230D190306F3FF7008E2BF5 /* FreshTrackTests */,
+			);
+			name = FreshTrackTests;
+			productName = FreshTrackTests;
+			productReference = 5230D18D306F3FF7008E2BF5 /* FreshTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5230D196306F3FF7008E2BF5 /* FreshTrackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5230D1A5306F3FF7008E2BF5 /* Build configuration list for PBXNativeTarget "FreshTrackUITests" */;
+			buildPhases = (
+				5230D193306F3FF7008E2BF5 /* Sources */,
+				5230D194306F3FF7008E2BF5 /* Frameworks */,
+				5230D195306F3FF7008E2BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5230D199306F3FF7008E2BF5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5230D19A306F3FF7008E2BF5 /* FreshTrackUITests */,
+			);
+			name = FreshTrackUITests;
+			productName = FreshTrackUITests;
+			productReference = 5230D197306F3FF7008E2BF5 /* FreshTrackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5230D173306F3FF4008E2BF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					5230D17A306F3FF4008E2BF5 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					5230D18C306F3FF7008E2BF5 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 5230D17A306F3FF4008E2BF5;
+					};
+					5230D196306F3FF7008E2BF5 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 5230D17A306F3FF4008E2BF5;
+					};
+				};
+			};
+			buildConfigurationList = 5230D176306F3FF4008E2BF5 /* Build configuration list for PBXProject "FreshTrack" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5230D172306F3FF4008E2BF5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5230D17C306F3FF4008E2BF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5230D17A306F3FF4008E2BF5 /* FreshTrack */,
+				5230D18C306F3FF7008E2BF5 /* FreshTrackTests */,
+				5230D196306F3FF7008E2BF5 /* FreshTrackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5230D179306F3FF4008E2BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		5230D18B306F3FF7008E2BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		5230D195306F3FF7008E2BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5230D177306F3FF4008E2BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		5230D189306F3FF7008E2BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		5230D193306F3FF7008E2BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5230D18F306F3FF7008E2BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5230D17A306F3FF4008E2BF5 /* FreshTrack */;
+			targetProxy = 5230D18E306F3FF7008E2BF5 /* PBXContainerItemProxy */;
+		};
+		5230D199306F3FF7008E2BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5230D17A306F3FF4008E2BF5 /* FreshTrack */;
+			targetProxy = 5230D198306F3FF7008E2BF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5230D19D306F3FF7008E2BF5 /* Debug configuration for PBXProject "FreshTrack" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5230D19E306F3FF7008E2BF5 /* Release configuration for PBXProject "FreshTrack" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5230D1A0306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrack" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5230D1A1306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrack" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5230D1A3306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrackTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreshTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FreshTrack";
+			};
+			name = Debug;
+		};
+		5230D1A4306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrackTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreshTrack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FreshTrack";
+			};
+			name = Release;
+		};
+		5230D1A6306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrackUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FreshTrack;
+			};
+			name = Debug;
+		};
+		5230D1A7306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrackUITests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FreshTrack;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5230D176306F3FF4008E2BF5 /* Build configuration list for PBXProject "FreshTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5230D19D306F3FF7008E2BF5 /* Debug configuration for PBXProject "FreshTrack" */,
+				5230D19E306F3FF7008E2BF5 /* Release configuration for PBXProject "FreshTrack" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		5230D19F306F3FF7008E2BF5 /* Build configuration list for PBXNativeTarget "FreshTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5230D1A0306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrack" */,
+				5230D1A1306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrack" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		5230D1A2306F3FF7008E2BF5 /* Build configuration list for PBXNativeTarget "FreshTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5230D1A3306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrackTests" */,
+				5230D1A4306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrackTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		5230D1A5306F3FF7008E2BF5 /* Build configuration list for PBXNativeTarget "FreshTrackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5230D1A6306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrackUITests" */,
+				5230D1A7306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrackUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5230D173306F3FF4008E2BF5 /* Project object */;
+	validationLevel = 1;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="25249" systemVersion="26A428" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FoodItemEntity" representedClassName=".FoodItemEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="expiryDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isConsumed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="purchaseDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="storageLocation" maxCount="1" deletionRule="Nullify" destinationEntity="StorageLocationEntity" inverseName="foodItems" inverseEntity="StorageLocationEntity"/>
+    </entity>
+    <entity name="StorageLocationEntity" representedClassName=".StorageLocationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="foodItems" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="FoodItemEntity" inverseName="storageLocation" inverseEntity="FoodItemEntity"/>
+    </entity>
+</model>
