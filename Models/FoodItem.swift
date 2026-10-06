@@ -17,12 +17,12 @@ struct FoodItem: Identifiable, Equatable {
     var isConsumed: Bool
     var storageLocation: StorageLocation
     
-    init(id: UUID,
+    init(id: UUID = UUID(),
          name: String,
          quantity: Int,
          purchaseDate: Date,
          expiryDate: Date,
-         isConsumed: Bool,
+         isConsumed: Bool = false,
          storageLocation: StorageLocation)
     {
         self.id = id
