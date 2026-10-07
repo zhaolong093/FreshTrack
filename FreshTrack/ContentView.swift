@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let addFoodItemUseCase: AddFoodItemUseCase
+    let viewFoodInventoryUseCase: ViewFoodInventoryUseCase
     
     var body: some View {
         NavigationStack {
@@ -28,6 +29,16 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                 
                 Spacer()
+                
+                NavigationLink{
+                    FoodListView(viewModel: FoodListViewModel(viewFoodInventoryUseCase: viewFoodInventoryUseCase))
+                } label:{
+                    Label("My food", systemImage: "refrigerator")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                }
+                .buttonStyle(.borderedProminent)
                 
                 NavigationLink{
                     AddFoodView(viewModel: AddFoodViewModel(addFoodItemUseCase: addFoodItemUseCase))

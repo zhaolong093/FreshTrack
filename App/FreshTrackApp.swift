@@ -13,6 +13,7 @@ struct FreshTrackApp: App {
     
     private let persistenceController: PersistenceController
     private let addFoodItemUseCase: AddFoodItemUseCase
+    private let viewFoodInventoryUseCase: ViewFoodInventoryUseCase
     
     init() {
         let persistenceController = PersistenceController.shared
@@ -20,11 +21,13 @@ struct FreshTrackApp: App {
         
         self.persistenceController = persistenceController
         self.addFoodItemUseCase = AddFoodItemUseCase(repository: repository)
+        self.viewFoodInventoryUseCase = ViewFoodInventoryUseCase(repository: repository)
     }
 
     var body: some Scene {
         WindowGroup {
-            ContentView(addFoodItemUseCase: addFoodItemUseCase)
+            ContentView(addFoodItemUseCase: addFoodItemUseCase, viewFoodInventoryUseCase:
+                            viewFoodInventoryUseCase)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
