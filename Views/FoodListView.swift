@@ -11,8 +11,13 @@ import SwiftUI
 struct FoodListView: View{
     @StateObject private var viewModel: FoodListViewModel
     
-    init(viewModel: FoodListViewModel) {
+    let markFoodAsConsumedUseCase:MarkFoodAsConsumedUseCase
+    
+    init(viewModel: FoodListViewModel,
+         markFoodAsConsumedUseCase: MarkFoodAsConsumedUseCase) {
         _viewModel = StateObject(wrappedValue: viewModel)
+        
+        self.markFoodAsConsumedUseCase = markFoodAsConsumedUseCase
     }
     
     var body: some View{
@@ -45,27 +50,34 @@ struct FoodListView: View{
         List{
             ForEach(viewModel.foodItems){
                 foodItem in
-                VStack(alignment: .leading, spacing: 8){
-                    HStack{
-                        Text(foodItem.name)
-                            .font(.headline)
-                        Spacer()
-                        Text(foodItem.storageLocation.name)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                
+                NavigationLink{
+                    FoodDetailsView(viewModel:FoodDetailsViewModel(foodItem: foodItem, markFoodAsConsumedUseCase: markFoodAsConsumedUseCase)){
+                        viewModel.loadFoodItems()
                     }
-                    
-                    HStack{
-                        Text("Quantity : \(foodItem.quantity)")
+                } label: {
+                    VStack(alignment: .leading, spacing: 8){
+                        HStack{
+                            Text(foodItem.name)
+                                .font(.headline)
+                            Spacer()
+                            Text(foodItem.storageLocation.name)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
                         
-                        Spacer()
-                        
-                        Text(foodItem.expiryDate, format: .dateTime.day().month(.abbreviated).year())
+                        HStack{
+                            Text("Quantity : \(foodItem.quantity)")
+                            
+                            Spacer()
+                            
+                            Text(foodItem.expiryDate, format: .dateTime.day().month(.abbreviated).year())
+                        }
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
                     }
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .padding(.vertical, 4)
                 }
-                .padding(.vertical, 4)
             }
         }
         
