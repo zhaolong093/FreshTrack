@@ -55,6 +55,10 @@ final class AddFoodViewModel: ObservableObject{
         )
         do {
             try addFoodItemUseCase.execute(foodItem)
+            ExpiryNotificationManager
+                .shared
+                .scheduleExpiryNotification(
+                    for: foodItem)
             
             resetForm()
             

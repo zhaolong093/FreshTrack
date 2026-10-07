@@ -134,6 +134,21 @@ struct DashboardView: View {
     
     private var navigationSection: some View {
         VStack(spacing: 12){
+            
+            // Tempory Button for Notification testing
+            Button {
+                ExpiryNotificationManager
+                    .shared
+                    .scheduleTestNotification()
+
+            } label: {
+                Label("Test Notification",systemImage: "bell.fill"
+                )
+                .frame(maxWidth: .infinity)
+                .padding()
+            }
+            .buttonStyle(.bordered)
+            
             NavigationLink{
                 FoodListView(viewModel: FoodListViewModel(viewFoodInventoryUseCase: viewFoodInventoryUseCase),
                              markFoodAsConsumedUseCase: markFoodAsConsumedUseCase

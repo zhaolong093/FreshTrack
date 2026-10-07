@@ -32,6 +32,10 @@ final class FoodDetailsViewModel: ObservableObject{
         
         do {
             try markFoodAsConsumedUseCase.execute(foodId: foodItem.id)
+            
+            ExpiryNotificationManager
+                .shared
+                .cancelExpiryNotification(for: foodItem.id)
             foodItem.isConsumed = true
             didMarkAsConsumed = true
         }

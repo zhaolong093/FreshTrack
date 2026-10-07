@@ -39,6 +39,10 @@ struct FreshTrackApp: App {
                         findExpiringFoodUseCase: findExpiringFoodUseCase
             )
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
+                .task{
+                    await ExpiryNotificationManager.shared.requestPermission()
+                }
         }
     }
 }
