@@ -6,6 +6,15 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		52DCD10030765FAE00D513CD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DCD0FF30765FAE00D513CD /* WidgetKit.framework */; };
+		52DCD10230765FAE00D513CD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DCD10130765FAE00D513CD /* SwiftUI.framework */; };
+		52DCD11130765FB700D513CD /* FreshTrackWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52DCD0FD30765FAD00D513CD /* FreshTrackWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52DCD12830766E6300D513CD /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DCD12730766E6300D513CD /* UserNotifications.framework */; };
+		52DCD12A30766E6300D513CD /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DCD12930766E6300D513CD /* UserNotificationsUI.framework */; };
+		52DCD13430766E6300D513CD /* FreshTrackNotificationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 52DCD12630766E6200D513CD /* FreshTrackNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5230D18E306F3FF7008E2BF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +30,72 @@
 			remoteGlobalIDString = 5230D17A306F3FF4008E2BF5;
 			remoteInfo = FreshTrack;
 		};
+		52DCD10F30765FB700D513CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5230D173306F3FF4008E2BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52DCD0FC30765FAD00D513CD;
+			remoteInfo = FreshTrackWidgetExtension;
+		};
+		52DCD13230766E6300D513CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5230D173306F3FF4008E2BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52DCD12530766E6200D513CD;
+			remoteInfo = FreshTrackNotificationExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52DCD11630765FB700D513CD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				52DCD13430766E6300D513CD /* FreshTrackNotificationExtension.appex in Embed Foundation Extensions */,
+				52DCD11130765FB700D513CD /* FreshTrackWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5230D17B306F3FF4008E2BF5 /* FreshTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5230D18D306F3FF7008E2BF5 /* FreshTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5230D197306F3FF7008E2BF5 /* FreshTrackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshTrackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DCD0FD30765FAD00D513CD /* FreshTrackWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FreshTrackWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DCD0FF30765FAE00D513CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		52DCD10130765FAE00D513CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		52DCD1183076614200D513CD /* FreshTrackWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreshTrackWidgetExtension.entitlements; sourceTree = "<group>"; };
+		52DCD12630766E6200D513CD /* FreshTrackNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FreshTrackNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52DCD12730766E6300D513CD /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		52DCD12930766E6300D513CD /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		52DCD11230765FB700D513CD /* Exceptions for "FreshTrackWidget" folder in "FreshTrackWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52DCD0FC30765FAD00D513CD /* FreshTrackWidgetExtension */;
+		};
+		52DCD11D3076640E00D513CD /* Exceptions for "Shared" folder in "FreshTrackWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WidgetDataStore.swift,
+				WidgetFoodItem.swift,
+			);
+			target = 52DCD0FC30765FAD00D513CD /* FreshTrackWidgetExtension */;
+		};
+		52DCD13530766E6300D513CD /* Exceptions for "FreshTrackNotificationExtension" folder in "FreshTrackNotificationExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52DCD12530766E6200D513CD /* FreshTrackNotificationExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5230D17D306F3FF4008E2BF5 /* FreshTrack */ = {
@@ -62,6 +130,9 @@
 		};
 		5230D1AC30735487008E2BF5 /* Shared */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				52DCD11D3076640E00D513CD /* Exceptions for "Shared" folder in "FreshTrackWidgetExtension" target */,
+			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
@@ -95,6 +166,22 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		52DCD10330765FAE00D513CD /* FreshTrackWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				52DCD11230765FB700D513CD /* Exceptions for "FreshTrackWidget" folder in "FreshTrackWidgetExtension" target */,
+			);
+			path = FreshTrackWidget;
+			sourceTree = "<group>";
+		};
+		52DCD12B30766E6300D513CD /* FreshTrackNotificationExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				52DCD13530766E6300D513CD /* Exceptions for "FreshTrackNotificationExtension" folder in "FreshTrackNotificationExtension" target */,
+			);
+			path = FreshTrackNotificationExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +200,27 @@
 			files = (
 			);
 		};
+		52DCD0FA30765FAD00D513CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				52DCD10230765FAE00D513CD /* SwiftUI.framework in Frameworks */,
+				52DCD10030765FAE00D513CD /* WidgetKit.framework in Frameworks */,
+			);
+		};
+		52DCD12330766E6200D513CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				52DCD12A30766E6300D513CD /* UserNotificationsUI.framework in Frameworks */,
+				52DCD12830766E6300D513CD /* UserNotifications.framework in Frameworks */,
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5230D172306F3FF4008E2BF5 = {
 			isa = PBXGroup;
 			children = (
+				52DCD1183076614200D513CD /* FreshTrackWidgetExtension.entitlements */,
 				5230D1A830735469008E2BF5 /* App */,
 				5230D1AA30735476008E2BF5 /* Data */,
 				52DCD0D4307363A700D513CD /* Errors */,
@@ -126,6 +228,9 @@
 				5230D190306F3FF7008E2BF5 /* FreshTrackTests */,
 				5230D19A306F3FF7008E2BF5 /* FreshTrackUITests */,
 				52DCD0C23073629000D513CD /* Models */,
+				52DCD10330765FAE00D513CD /* FreshTrackWidget */,
+				52DCD12B30766E6300D513CD /* FreshTrackNotificationExtension */,
+				52DCD0FE30765FAD00D513CD /* Frameworks */,
 				5230D17C306F3FF4008E2BF5 /* Products */,
 				52DCD0D1307363A500D513CD /* Repositories */,
 				5230D1AD3073548D008E2BF5 /* Resources */,
@@ -142,8 +247,21 @@
 				5230D17B306F3FF4008E2BF5 /* FreshTrack.app */,
 				5230D18D306F3FF7008E2BF5 /* FreshTrackTests.xctest */,
 				5230D197306F3FF7008E2BF5 /* FreshTrackUITests.xctest */,
+				52DCD0FD30765FAD00D513CD /* FreshTrackWidgetExtension.appex */,
+				52DCD12630766E6200D513CD /* FreshTrackNotificationExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		52DCD0FE30765FAD00D513CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52DCD0FF30765FAE00D513CD /* WidgetKit.framework */,
+				52DCD10130765FAE00D513CD /* SwiftUI.framework */,
+				52DCD12730766E6300D513CD /* UserNotifications.framework */,
+				52DCD12930766E6300D513CD /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +274,13 @@
 				5230D177306F3FF4008E2BF5 /* Sources */,
 				5230D178306F3FF4008E2BF5 /* Frameworks */,
 				5230D179306F3FF4008E2BF5 /* Resources */,
+				52DCD11630765FB700D513CD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				52DCD11030765FB700D513CD /* PBXTargetDependency */,
+				52DCD13330766E6300D513CD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5230D17D306F3FF4008E2BF5 /* FreshTrack */,
@@ -219,6 +342,42 @@
 			productReference = 5230D197306F3FF7008E2BF5 /* FreshTrackUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		52DCD0FC30765FAD00D513CD /* FreshTrackWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52DCD11330765FB700D513CD /* Build configuration list for PBXNativeTarget "FreshTrackWidgetExtension" */;
+			buildPhases = (
+				52DCD0F930765FAD00D513CD /* Sources */,
+				52DCD0FA30765FAD00D513CD /* Frameworks */,
+				52DCD0FB30765FAD00D513CD /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				52DCD10330765FAE00D513CD /* FreshTrackWidget */,
+			);
+			name = FreshTrackWidgetExtension;
+			productName = FreshTrackWidgetExtension;
+			productReference = 52DCD0FD30765FAD00D513CD /* FreshTrackWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		52DCD12530766E6200D513CD /* FreshTrackNotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52DCD13630766E6300D513CD /* Build configuration list for PBXNativeTarget "FreshTrackNotificationExtension" */;
+			buildPhases = (
+				52DCD12230766E6200D513CD /* Sources */,
+				52DCD12330766E6200D513CD /* Frameworks */,
+				52DCD12430766E6200D513CD /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				52DCD12B30766E6300D513CD /* FreshTrackNotificationExtension */,
+			);
+			name = FreshTrackNotificationExtension;
+			productName = FreshTrackNotificationExtension;
+			productReference = 52DCD12630766E6200D513CD /* FreshTrackNotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,6 +399,12 @@
 						CreatedOnToolsVersion = 27.0;
 						TestTargetID = 5230D17A306F3FF4008E2BF5;
 					};
+					52DCD0FC30765FAD00D513CD = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					52DCD12530766E6200D513CD = {
+						CreatedOnToolsVersion = 27.0;
+					};
 				};
 			};
 			buildConfigurationList = 5230D176306F3FF4008E2BF5 /* Build configuration list for PBXProject "FreshTrack" */;
@@ -259,6 +424,8 @@
 				5230D17A306F3FF4008E2BF5 /* FreshTrack */,
 				5230D18C306F3FF7008E2BF5 /* FreshTrackTests */,
 				5230D196306F3FF7008E2BF5 /* FreshTrackUITests */,
+				52DCD0FC30765FAD00D513CD /* FreshTrackWidgetExtension */,
+				52DCD12530766E6200D513CD /* FreshTrackNotificationExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +442,16 @@
 			);
 		};
 		5230D195306F3FF7008E2BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		52DCD0FB30765FAD00D513CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		52DCD12430766E6200D513CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -297,6 +474,16 @@
 			files = (
 			);
 		};
+		52DCD0F930765FAD00D513CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		52DCD12230766E6200D513CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -309,6 +496,16 @@
 			isa = PBXTargetDependency;
 			target = 5230D17A306F3FF4008E2BF5 /* FreshTrack */;
 			targetProxy = 5230D198306F3FF7008E2BF5 /* PBXContainerItemProxy */;
+		};
+		52DCD11030765FB700D513CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52DCD0FC30765FAD00D513CD /* FreshTrackWidgetExtension */;
+			targetProxy = 52DCD10F30765FB700D513CD /* PBXContainerItemProxy */;
+		};
+		52DCD13330766E6300D513CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52DCD12530766E6200D513CD /* FreshTrackNotificationExtension */;
+			targetProxy = 52DCD13230766E6300D513CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -437,8 +634,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FreshTrack/FreshTrack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98RH872ZCX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -453,6 +652,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -468,8 +668,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FreshTrack/FreshTrack.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98RH872ZCX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -484,6 +686,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -574,6 +777,126 @@
 			};
 			name = Release;
 		};
+		52DCD11430765FB700D513CD /* Debug configuration for PBXNativeTarget "FreshTrackWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FreshTrackWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98RH872ZCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreshTrackWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FreshTrackWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack.FreshTrackWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52DCD11530765FB700D513CD /* Release configuration for PBXNativeTarget "FreshTrackWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FreshTrackWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98RH872ZCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreshTrackWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FreshTrackWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack.FreshTrackWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52DCD13730766E6300D513CD /* Debug configuration for PBXNativeTarget "FreshTrackNotificationExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98RH872ZCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreshTrackNotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FreshTrackNotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack.FreshTrackNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52DCD13830766E6300D513CD /* Release configuration for PBXNativeTarget "FreshTrackNotificationExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98RH872ZCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreshTrackNotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FreshTrackNotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.FreshTrack.FreshTrackNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -606,6 +929,22 @@
 			buildConfigurations = (
 				5230D1A6306F3FF7008E2BF5 /* Debug configuration for PBXNativeTarget "FreshTrackUITests" */,
 				5230D1A7306F3FF7008E2BF5 /* Release configuration for PBXNativeTarget "FreshTrackUITests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		52DCD11330765FB700D513CD /* Build configuration list for PBXNativeTarget "FreshTrackWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DCD11430765FB700D513CD /* Debug configuration for PBXNativeTarget "FreshTrackWidgetExtension" */,
+				52DCD11530765FB700D513CD /* Release configuration for PBXNativeTarget "FreshTrackWidgetExtension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		52DCD13630766E6300D513CD /* Build configuration list for PBXNativeTarget "FreshTrackNotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DCD13730766E6300D513CD /* Debug configuration for PBXNativeTarget "FreshTrackNotificationExtension" */,
+				52DCD13830766E6300D513CD /* Release configuration for PBXNativeTarget "FreshTrackNotificationExtension" */,
 			);
 			defaultConfigurationName = Release;
 		};

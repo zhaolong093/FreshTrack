@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import WidgetKit
 
 final class CoreDataFoodRepository: FoodRepository{
     
@@ -34,6 +35,9 @@ final class CoreDataFoodRepository: FoodRepository{
             )
             
             try context.save()
+            
+            //update Widget
+            syncWidgetData()
         }
         catch {
             context.rollback()
@@ -63,12 +67,12 @@ final class CoreDataFoodRepository: FoodRepository{
         let calender = Calendar.current
         let startDate = calender.startOfDay(for: Date())
         
-        guard let endDate = Calendar.current.date(byAdding: .day, value: days + 7, to: startDate)
+        guard let endDate = Calendar.current.date(byAdding: .day, value: days + 1, to: startDate)
                 else{
             return []
         }
         request.predicate = NSPredicate(
-            format: "isConsumed == NO AND expiryDate >= %@ AND expiryDate <= %@",
+            format: "isConsumed == NO AND expiryDate >= %@ AND expiryDate < %@",
             startDate as NSDate,
             endDate as NSDate
         )
@@ -98,6 +102,9 @@ final class CoreDataFoodRepository: FoodRepository{
         entity.isConsumed = true
         do {
             try context.save()
+            
+            // Update Widget
+            syncWidgetData()
         }
         catch {
             context.rollback()
@@ -152,5 +159,31 @@ final class CoreDataFoodRepository: FoodRepository{
             isConsumed: entity.isConsumed,
             storageLocation: location
         )
+    }
+    
+    // MARK: Widget Sync
+
+    func syncWidgetData() {
+        do {
+            let expiringFood = try fetchExpiringFood(withinDays: 3)
+
+            let widgetItems = expiringFood.map {
+                    WidgetFoodItem(
+                        id: $0.id,
+                        name: $0.name,
+                        expiryDate: $0.expiryDate,
+                        storageLocation:$0
+                                .storageLocation
+                                .name)
+                }
+
+            WidgetDataStore.save(widgetItems)
+
+            WidgetCenter.shared.reloadTimelines(ofKind:"FreshTrackWidget")
+
+        } catch {
+
+            print("Failed to update FreshTrack widget: \(error)")
+        }
     }
 }

@@ -22,6 +22,8 @@ struct FreshTrackApp: App {
         let persistenceController = PersistenceController.shared
         let repository = CoreDataFoodRepository(context: persistenceController.container.viewContext)
         
+        repository.syncWidgetData()
+        
         self.persistenceController = persistenceController
         self.addFoodItemUseCase = AddFoodItemUseCase(repository: repository)
         self.viewFoodInventoryUseCase = ViewFoodInventoryUseCase(repository: repository)
